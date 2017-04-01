@@ -111,6 +111,7 @@
         
         make.setTitle(@"立即借款").forState(UIControlStateNormal);
         make.setBackgroundColor(MainRedColor).forState(UIControlStateNormal);
+        make.setTitleColor(UIColor.white()).forState(UIControlStateNormal);
         make.setFont([UIFont systemFontOfSize:18]);
         make.setCornerRadius(5);
     });
