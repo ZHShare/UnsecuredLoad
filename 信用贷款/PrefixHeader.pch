@@ -1,0 +1,54 @@
+//
+//  PrefixHeader.pch
+//  信用贷款
+//
+//  Created by YE on 2017/3/29.
+//  Copyright © 2017年 Eter. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#define MainBgColor ([UIColor colorWithRed:0xf5/255.0 green:0xf5/255.0 blue:0xf5/255.0 alpha:1.0])
+#define MainRedColor ([UIColor colorWithRed:0xf6/255.0 green:0x4f/255.0 blue:0x47/255.0 alpha:1.000])
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define FIT_750_HEIGHT (SCREEN_HEIGHT/667.0)
+#define FIT_750_WIDTH (SCREEN_WIDTH/375.0)
+
+#define iPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//#ifdef DEBUG    // 调试阶段
+#define KTLog(...) NSLog(__VA_ARGS__)
+// 输出打印 带有所在的函数以及所在的行数
+#define NewKTLog(xx, ...) NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//#else   // 发布阶段
+//#define KTLog(...)
+
+
+
+
+#import "Masonry.h"
+#import "Router.h"
+
+
+
+#import "ParentController.h"
+#import "OC_UIExtension.h"
+
+
+
